@@ -1,13 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Menu from '../views/Menu.vue'
+import Home from '../views/Home.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'Menu',
-      component: Menu
+      name: 'Home',
+      component: Home
     },
     {
       path: '/about',

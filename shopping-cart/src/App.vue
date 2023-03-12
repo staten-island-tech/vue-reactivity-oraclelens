@@ -15,4 +15,7 @@ import {RouterView } from 'vue-router'
     font-weight: bold;
     color: black;
   }
+  .linktocart{
+    background-color: pink;
+  }
 </style>

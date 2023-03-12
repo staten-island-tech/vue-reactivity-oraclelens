@@ -26,9 +26,6 @@ export default {
         addalert: function(){
             alert("The Item Has Been Added to Your Cart")
         },
-        add: function(){
-
-        }
     }
 };
 </script>

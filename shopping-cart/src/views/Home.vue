@@ -1,14 +1,12 @@
 <script>
 import Card from '../components/Card.vue';
 import AddtoCartButton from '../components/AddtoCart.vue';
-import CartButton from '../components/Cart.vue'
 
 export default{
   name: "Menu",
   components: {
     Card,
     AddtoCartButton,
-    CartButton,
   },
   data(){
     return{
@@ -49,9 +47,6 @@ export default{
 
 <template>
   <main>
-    <div class="bringtocart">
-      <CartButton>Cart</CartButton>
-    </div>
     <div class="menu">
       <Card v-for="food in foods" 
       :key="food.name" 
@@ -61,18 +56,10 @@ export default{
       :description="food.description"
       :cals="food.cals"/>    
     </div>
-
   </main>
 </template>
 
 <style scoped>
-  .bringtocart{
-    width:350px;
-      text-align: center;
-      margin: auto;
-      border-radius: 50px;
-      margin-bottom: 15px;
-  }
   .menu{
     display: flex;
     flex-wrap: wrap; 

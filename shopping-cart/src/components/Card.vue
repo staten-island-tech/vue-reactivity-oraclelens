@@ -10,6 +10,7 @@
 
 <script>
 import AddtoCartButton from './AddtoCart.vue';
+
 export default {
     name: "Card",
     props:{

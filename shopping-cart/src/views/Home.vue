@@ -8,6 +8,9 @@ export default{
     Card,
     AddtoCartButton,
   },
+  methods:{
+
+  },
   data(){
     return{
       foods: [

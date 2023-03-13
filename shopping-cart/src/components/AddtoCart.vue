@@ -4,7 +4,14 @@
 
 <script>
     export default {
-        name: "AddtoCartButton",
+        name: "AddtoCartButton",    
+        data() {
+            return {
+        }
+        },
+        props: {},
+        methods: {
+        },
     }
 </script>
 

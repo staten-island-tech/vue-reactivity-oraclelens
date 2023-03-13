@@ -4,7 +4,7 @@
         <img :src="image" alt="">
         <p>${{ cost }} | Calories: {{ cals }}</p>
         <p class="desc">{{ description }}</p>
-        <AddtoCartButton @click="addalert">Add {{ name }} to Cart ${{ cost }}</AddtoCartButton>
+        <AddtoCartButton @click="addtoCart">Add {{ name }} to Cart ${{ cost }}</AddtoCartButton>
     </div>
 </template>
 
@@ -20,12 +20,18 @@ export default {
         image:String,
         description:String,
     }, 
+    data(){
+        return{
+            total: 0,
+        }
+    },
     components:{
         AddtoCartButton,
     },
     methods:{
-        addalert: function(){
-            alert("The Item Has Been Added to Your Cart")
+        addtoCart(){
+            this.total += 8.69,
+            console.log(this.total)
         },
     }
 };

@@ -9,10 +9,11 @@ export default{
     AddtoCartButton,
   },
   methods:{
-
   },
   data(){
     return{
+      cart : [],
+      totalcartitems: 0, 
       foods: [
         {
           name: "Shack Burger",

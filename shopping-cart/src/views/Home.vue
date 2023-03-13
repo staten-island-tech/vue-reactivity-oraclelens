@@ -9,6 +9,7 @@ export default{
     AddtoCartButton,
   },
   methods:{
+
   },
   data(){
     return{

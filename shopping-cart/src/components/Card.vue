@@ -22,7 +22,7 @@ export default {
     }, 
     data(){
         return{
-            total: 0,
+            totalofitem: 0,
         }
     },
     components:{
@@ -30,8 +30,8 @@ export default {
     },
     methods:{
         addtoCart(){
-            this.total += 8.69,
-            console.log(this.total)
+            this.totalofitem += 1,
+            console.log(this.totalofitem)
         },
     }
 };

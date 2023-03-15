@@ -72,7 +72,9 @@ export default {
         >Cart</CartButton
       >
     </div>
-    <div v-show="cartdiv" class="cartdiv">HELP</div>
+    <div v-show="cartdiv" class="cartdiv">
+      <div class="cartitemsdiv"></div>
+    </div>
     <div class="menu">
       <Card
         v-for="food in foods"

@@ -1,7 +1,6 @@
 <script>
 import Card from "../components/Card.vue";
 import AddtoCartButton from "../components/AddtoCart.vue";
-import Cart from "../components/Cart.vue";
 import CartButton from "../components/CartButton.vue";
 
 export default {
@@ -9,12 +8,11 @@ export default {
   components: {
     Card,
     AddtoCartButton,
-    Cart,
     CartButton,
   },
   methods: {
-    showCart() {
-      console.log("cart opened");
+    additemtocartevent() {
+      console.log("bro");
     },
   },
   data() {
@@ -84,6 +82,7 @@ export default {
         :image="food.image"
         :description="food.description"
         :cals="food.cals"
+        @cartbuttonclick="additemtocartevent"
       />
     </div>
   </main>

@@ -1,5 +1,5 @@
 <script setup>
-import {RouterView } from 'vue-router'
+import { RouterView } from "vue-router";
 </script>
 
 <template>
@@ -8,14 +8,12 @@ import {RouterView } from 'vue-router'
 </template>
 
 <style scoped>
-  h1{
-    margin: auto;
-    text-align: center;
-    margin-bottom:20px; 
-    font-weight: bold;
-    color: black;
-  }
-  .linktocart{
-    background-color: pink;
-  }
+h1 {
+  margin: auto;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: black;
+  font-size: 4vh;
+}
 </style>

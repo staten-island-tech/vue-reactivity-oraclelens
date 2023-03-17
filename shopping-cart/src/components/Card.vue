@@ -33,6 +33,7 @@ export default {
   methods: {
     addtoCart() {
       (this.totalofitem += 1), console.log(this.totalofitem);
+      this.$emit("added", this.name);
     },
   },
 };

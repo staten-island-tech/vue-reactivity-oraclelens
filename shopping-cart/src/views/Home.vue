@@ -2,6 +2,7 @@
 import Card from "../components/Card.vue";
 import AddtoCartButton from "../components/AddtoCart.vue";
 import CartButton from "../components/CartButton.vue";
+import Cart from "../components/Cart.vue";
 
 export default {
   name: "Menu",
@@ -9,10 +10,11 @@ export default {
     Card,
     AddtoCartButton,
     CartButton,
+    Cart,
   },
   methods: {
     additemtocartevent() {
-      console.log("bro");
+      console.log("so silly");
     },
   },
   data() {
@@ -71,7 +73,14 @@ export default {
       >
     </div>
     <div v-show="cartdiv" class="cartdiv">
-      <div class="cartitemsdiv"></div>
+      <div class="cartitemsdiv">
+        <Cart
+          v-for="food in foods"
+          :key="food.name"
+          :name="food.name"
+          :cost="food.cost"
+        />
+      </div>
     </div>
     <div class="menu">
       <Card
@@ -82,7 +91,7 @@ export default {
         :image="food.image"
         :description="food.description"
         :cals="food.cals"
-        @cartbuttonclick="additemtocartevent"
+        @added="additemtocartevent"
       />
     </div>
   </main>
@@ -104,7 +113,6 @@ export default {
   margin: auto;
   margin-bottom: 30px;
   border-radius: 50px;
-  height: 150px;
 }
 * {
   color: black;

@@ -14,13 +14,18 @@ export default {
   },
   methods: {
     additemtocartevent() {
-      console.log("so silly");
+      this.food = "hi";
+    },
+    test() {
+      console.log("hi");
     },
   },
   data() {
     return {
+      name: "test",
+      cost: 5,
       cartdiv: false,
-      cart: [],
+      carts: [this.name, this.cost],
       totalcartitems: 0,
       foods: [
         {
@@ -75,7 +80,7 @@ export default {
     <div v-show="cartdiv" class="cartdiv">
       <div class="cartitemsdiv">
         <Cart
-          v-for="food in foods"
+          v-for="cart in carts"
           :key="food.name"
           :name="food.name"
           :cost="food.cost"

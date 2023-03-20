@@ -80,7 +80,7 @@ export default {
     <div v-show="cartdiv" class="cartdiv">
       <div class="cartitemsdiv">
         <Cart
-          v-for="cart in carts"
+          v-for="food in foods"
           :key="food.name"
           :name="food.name"
           :cost="food.cost"

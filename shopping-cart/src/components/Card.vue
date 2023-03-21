@@ -4,13 +4,14 @@
     <img :src="image" alt="" />
     <p>${{ cost }} | Calories: {{ cals }}</p>
     <p class="desc">{{ description }}</p>
-    <AddtoCartButton @click="addtoCart"
+    <AddtoCartButton @click="test"
       >Add {{ name }} to Cart ${{ cost }}</AddtoCartButton
     >
   </div>
 </template>
 
 <script>
+import { pushScopeId } from "vue";
 import AddtoCartButton from "./AddtoCart.vue";
 
 export default {
@@ -25,15 +26,18 @@ export default {
   data() {
     return {
       totalofitem: 0,
+      carts: [],
     };
   },
   components: {
     AddtoCartButton,
   },
   methods: {
-    addtoCart() {
-      (this.totalofitem += 1), console.log(this.totalofitem);
-      this.$emit("added", this.name);
+    test() {
+      this.$emit("added");
+      this.$emit("omgplswork");
+      this.carts.push(this.name);
+      console.log(this.carts);
     },
   },
 };

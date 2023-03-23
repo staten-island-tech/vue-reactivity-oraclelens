@@ -3,6 +3,8 @@ import Card from "../components/Card.vue";
 import AddtoCartButton from "../components/AddtoCart.vue";
 import CartButton from "../components/CartButton.vue";
 import Cart from "../components/Cart.vue";
+import PhysicalCart from "../components/PhysicalCart.vue";
+import { carts } from "../components/Card.vue";
 
 export default {
   name: "Menu",
@@ -11,12 +13,9 @@ export default {
     AddtoCartButton,
     CartButton,
     Cart,
+    PhysicalCart,
   },
-  methods: {
-    additemtocartevent() {
-      console.log("helpme");
-    },
-  },
+  methods: {},
   data() {
     return {
       cartdiv: false,
@@ -73,12 +72,12 @@ export default {
     </div>
     <div v-show="cartdiv" class="cartdiv">
       <div class="cartitemsdiv">
-        <Cart
-          v-for="cart in carts"
-          :key="cart.name"
-          :name="cart.name"
-          :cost="cart.cost"
-        />
+        Items:
+        <ul>
+          {{
+            carts.carts
+          }}
+        </ul>
       </div>
     </div>
     <div class="menu">
@@ -90,9 +89,9 @@ export default {
         :image="food.image"
         :description="food.description"
         :cals="food.cals"
-        @added="additemtocartevent"
       />
     </div>
+    <PhysicalCart> </PhysicalCart>
   </main>
 </template>
 

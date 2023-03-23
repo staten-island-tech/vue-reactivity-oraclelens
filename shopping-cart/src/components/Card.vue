@@ -11,8 +11,12 @@
 </template>
 
 <script>
-import { pushScopeId } from "vue";
 import AddtoCartButton from "./AddtoCart.vue";
+import { reactive } from "vue";
+
+export const carts = reactive({
+  carts: [],
+});
 
 export default {
   name: "Card",
@@ -25,7 +29,6 @@ export default {
   },
   data() {
     return {
-      totalofitem: 0,
       carts: [],
     };
   },
@@ -34,8 +37,6 @@ export default {
   },
   methods: {
     test() {
-      this.$emit("added");
-      this.$emit("omgplswork");
       this.carts.push(this.name);
       console.log(this.carts);
     },

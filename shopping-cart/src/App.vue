@@ -4,6 +4,7 @@ import { RouterView } from "vue-router";
 
 <template>
   <h1>Off-Brand Shake Shack</h1>
+  <h1>Make A List!</h1>
   <RouterView />
 </template>
 

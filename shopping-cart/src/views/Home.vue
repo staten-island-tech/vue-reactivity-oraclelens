@@ -4,7 +4,8 @@ import AddtoCartButton from "../components/AddtoCart.vue";
 import CartButton from "../components/CartButton.vue";
 import Cart from "../components/Cart.vue";
 import PhysicalCart from "../components/PhysicalCart.vue";
-import { carts } from "../components/Card.vue";
+import { store } from '../components/store.js'
+
 
 export default {
   name: "Menu",
@@ -18,6 +19,7 @@ export default {
   methods: {},
   data() {
     return {
+      store,
       cartdiv: false,
       carts: [],
       foods: [
@@ -73,10 +75,15 @@ export default {
     <div v-show="cartdiv" class="cartdiv">
       <div class="cartitemsdiv">
         Items:
+        <Cart
+          v-for="cart in store"
+          :key="cart"
+          :name="cart"
+        />
         <ul>
-          {{
-            carts.carts
-          }}
+          <li v-for="item in store">
+            {{ store.cart }}
+          </li>
         </ul>
       </div>
     </div>
@@ -91,7 +98,6 @@ export default {
         :cals="food.cals"
       />
     </div>
-    <PhysicalCart> </PhysicalCart>
   </main>
 </template>
 

@@ -1,18 +1,17 @@
 <template>
   <div class="cart">
-    <Cart
-      v-for="cart in carts"
-      :key="cart.name"
-      :name="cart.name"
-      :cost="cart.cost"
-      @test="additemspls"
-    />
+    <ul>
+      <li v-for="store in store">
+      {{ cart }}
+    </li>
+  </ul>
   </div>
 </template>
 
 <script>
 import CartButton from "../components/CartButton.vue";
 import Cart from "../components/Cart.vue";
+import { store } from './store.js'
 
 export default {
   name: "PhysicalCart",
@@ -21,7 +20,9 @@ export default {
     Cart,
   },
   data() {
-    return {};
+    return {
+      store,
+    };
   },
   props: {
     name: String,

@@ -12,11 +12,7 @@
 
 <script>
 import AddtoCartButton from "./AddtoCart.vue";
-import { reactive } from "vue";
-
-export const carts = reactive({
-  carts: [],
-});
+import { store } from './store.js'
 
 export default {
   name: "Card",
@@ -29,7 +25,7 @@ export default {
   },
   data() {
     return {
-      carts: [],
+      store, 
     };
   },
   components: {
@@ -37,8 +33,8 @@ export default {
   },
   methods: {
     test() {
-      this.carts.push(this.name);
-      console.log(this.carts);
+      this.store.cart.push(this.name, this.cost);
+      console.log(this.store.cart);
     },
   },
 };

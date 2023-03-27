@@ -2,16 +2,16 @@
   <div class="cart">
     <ul>
       <li v-for="store in store">
-      {{ cart }}
-    </li>
-  </ul>
+        {{ cart }}
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
 import CartButton from "../components/CartButton.vue";
 import Cart from "../components/Cart.vue";
-import { store } from './store.js'
+import { store } from "./store.js";
 
 export default {
   name: "PhysicalCart",

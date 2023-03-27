@@ -12,7 +12,7 @@
 
 <script>
 import AddtoCartButton from "./AddtoCart.vue";
-import { store } from './store.js'
+import { store } from "./store.js";
 
 export default {
   name: "Card",
@@ -25,7 +25,7 @@ export default {
   },
   data() {
     return {
-      store, 
+      store,
     };
   },
   components: {
@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     test() {
-      this.store.cart.push(this.name, this.cost);
+      this.store.cart.push({ name: this.name, cost: this.cost });
       console.log(this.store.cart);
     },
   },

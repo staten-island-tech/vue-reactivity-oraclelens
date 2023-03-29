@@ -42,20 +42,21 @@ export default {
 
 <style scoped>
 .cartitems {
-  background-color: rgb(155, 155, 155);
+  background-color: rgb(255, 255, 255);
   text-align: center;
   padding: 15px;
   margin: auto;
   margin-bottom: 30px;
   border-radius: 50px;
   width: 650px;
+  margin-top: 20px;
 }
 img {
   width: 200px;
   border-radius: 50%;
 }
 h2 {
-  font-size: 3vh;
+  font-size: 2vh;
 }
 .name {
   font-weight: bold;

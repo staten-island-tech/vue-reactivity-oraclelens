@@ -58,6 +58,41 @@ export default {
           description:
             "Crispy, white-meat chicken breast over lettuce, pickles, and buttermilk herb mayo on a toasted potato bun",
         },
+        {
+          name: "Shake Stack",
+          cost: 11.89,
+          cals: 770,
+          image:
+            "https://d2luv1saso99wi.cloudfront.net/2022_Digital-Menu_Burgers_ShackStack_1500x920_lg1663589714.jpeg",
+          description:
+            "Angus beef cheeseburger topped with a 'Shroom Burger with lettuce, tomato, and ShackSauce on a toasted potato bun",
+        },
+        {
+          name: "Fries",
+          cost: 3.99,
+          cals: 470,
+          image:
+            "https://d2luv1saso99wi.cloudfront.net/2022_Digital-Menu_CrinkleCutFries_Fries_1500x920_lg1663591933.jpeg",
+          description: "Crispy crinkle cut fries (contains soy)",
+        },
+        {
+          name: "Cheese Fries",
+          cost: 4.99,
+          cals: 710,
+          image:
+            "https://d2luv1saso99wi.cloudfront.net/2022_Digital-Menu_CrinkleCutFries_CheeseFries_1500x920_lg1663591946.jpeg",
+          description:
+            "Crispy crinkle cuts topped with our cheese sauce (contains soy and milk)",
+        },
+        {
+          name: "Bacon Cheese Fries",
+          cost: 6.49,
+          cals: 840,
+          image:
+            "https://d2luv1saso99wi.cloudfront.net/2022_Digital-Menu_CrinkleCutFries_BaconCheeseFries_1500x920_lg1663591959.jpeg",
+          description:
+            "Crispy crinkle cuts topped with our cheese sauce and applewood-smoked bacon (contains soy and milk)",
+        },
       ],
     };
   },
@@ -73,13 +108,13 @@ export default {
     </div>
     <div v-show="cartdiv" class="cartdiv">
       <div class="cartitemsdiv">
-        Items:
-        <Cart v-for="item in store.cart" :key="cart" :name="cart" />
-        <!-- <ul>
-          <li v-for="item in store">
-            {{ item.name }}
-          </li>
-        </ul> -->
+        <h3>Items:</h3>
+        <Cart
+          v-for="item in store.cart"
+          :key="item.name"
+          :name="item.name"
+          :cost="item.cost"
+        />
       </div>
     </div>
     <div class="menu">
@@ -106,7 +141,7 @@ export default {
 }
 .cartdiv {
   width: 700px;
-  background-color: rgb(148, 148, 148);
+  background-color: rgb(125, 180, 125);
   text-align: center;
   padding: 15px;
   margin: auto;
@@ -115,5 +150,9 @@ export default {
 }
 * {
   color: black;
+}
+h3 {
+  font-size: 2.5vh;
+  font-weight: bold;
 }
 </style>

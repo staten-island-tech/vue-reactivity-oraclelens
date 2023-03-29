@@ -50,6 +50,8 @@ export default {
   margin-bottom: 30px;
   border-radius: 50px;
   height: 370px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 img {
   width: 200px;

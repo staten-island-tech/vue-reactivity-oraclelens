@@ -30,13 +30,7 @@ export default {
   components: {
     removefromCartButton,
   },
-  methods: {
-    removefromCart() {
-      (this.totalofitem -= 1), console.log(this.totalofitem);
-      this.$emit("added");
-      console.log(this.name);
-    },
-  },
+  methods: {},
 };
 </script>
 

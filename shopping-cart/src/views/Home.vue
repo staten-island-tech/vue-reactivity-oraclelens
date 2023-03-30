@@ -3,7 +3,6 @@ import Card from "../components/Card.vue";
 import AddtoCartButton from "../components/AddtoCart.vue";
 import CartButton from "../components/CartButton.vue";
 import Cart from "../components/Cart.vue";
-import PhysicalCart from "../components/PhysicalCart.vue";
 import { store } from "../components/store.js";
 
 export default {
@@ -13,7 +12,6 @@ export default {
     AddtoCartButton,
     CartButton,
     Cart,
-    PhysicalCart,
   },
   methods: {},
   data() {
@@ -114,6 +112,7 @@ export default {
           :key="item.name"
           :name="item.name"
           :cost="item.cost"
+          :image="item.image"
         />
       </div>
     </div>

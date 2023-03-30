@@ -33,7 +33,11 @@ export default {
   },
   methods: {
     test() {
-      this.store.cart.push({ name: this.name, cost: this.cost });
+      this.store.cart.push({
+        name: this.name,
+        cost: this.cost,
+        image: this.image,
+      });
       console.log(this.store.cart);
     },
   },

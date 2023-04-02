@@ -4,7 +4,7 @@ import { RouterView } from "vue-router";
 
 <template>
   <h1>Off-Brand Shake Shack</h1>
-  <RouterView />
+  <RouterView/>
 </template>
 
 <style scoped>
